@@ -1,0 +1,27 @@
+:root{
+    font-size: 62.5%;
+    --fontBase: 'Roboto', sans-serif;
+    --gray1: #424242;
+    --gray2: #616161;
+    --gray3: #808080;
+    --black1: #000000;
+    --black2: #212121;
+    --black3: #212429;
+    --yelow: #FEC62E;
+    --white: #FFFFFF;
+    --headLine1: normal 2.4rem/2.8rem var(var(--fontBase));
+    --headLine2: normal 2.4rem/2.8rem var(var(--fontBase));
+    --headLine2: normal 2rem/2.3rem var(var(--fontBase));
+    --body1: normal 1.6rem/2.4rem var(var(--fontBase));
+    --body2: italic 1.6rem/2.4rem var(var(--fontBase));
+    --body2: normal 1.6rem/2.4rem var(var(--fontBase));
+}
+
+body{
+    background: var(--white);
+    min-block-size: 100vh;
+    font-size: 1.6rem;
+    font: var(--font);
+    margin: 0;
+    padding: 0;
+}
