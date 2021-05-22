@@ -7,7 +7,7 @@
     <title>Nemium</title>
     <link rel="stylesheet" href="../css/style_A.css" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="hero"></div>
@@ -139,7 +139,7 @@
                     <h3 id="dom">DOM</h3>
                     <p>El Document Object Model es una estructura de árbol que representará todos nuestros proyectos web como si un árbol genealógico fuera: padres, hijos, hermanos con niveles infinitos. cuando entendemos esta anidación podemos identificar dependencias, herencias en css y que tan complejo es nuestro proyecto.</p>
                     <figure>
-                        <img src="../images/dom.png" alt="Representacion del Document Object Model">
+                        <img src="../images/dom.png" alt="Representacion del Document Object Model" class="dom">
                     </figure>
                 </section>
                 <section class="main-content__section">
@@ -154,11 +154,61 @@
                     <h3 id="css">css</h3>
                     <p>Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos utilizado para describir la presentación de documentos HTML</p>
                     <figure>
-                        <img src="../images/css.png" alt="Imagen de CSS">
+                        <img src="../images/css.png" alt="Imagen de CSS" class="css">
                     </figure>
                 </section>
-            </div>          
+            </div>
+            <div class="main-content">
+                <h2>Modelo de caja</h2>
+                <h3>El modelo de caja está compuesto por:</h3>
+                <p>Chrome va a ser el navegador que utilizaremos en el curso por su extenso soporte de nuevos estándares y herramientas de desarrollo avanzadas y de amigable uso.</p>
+                <ol>
+                    <li>Tamaño del del contenido / ancho y alto</li>
+                    <li>Padding / Relleno</li>
+                    <li>Border / Bordes</li>
+                    <li>Margin / Márgenes</li>
+                </ol>
+                <h3>Propiedades físicas para el modelo de caja:</h3>
+                <ul>
+                    <li>width / height</li>
+                    <li>margin / margin-top | margin-right | margin-bottom | margin-left</li>
+                    <li>border / border-top | border-right | border-bottom | border-left</li>
+                    <li>padding / padding-top | padding-right | padding-bottom | padding-left</li>
+                </ul>
+                <h3>Propiedades lógicas para el modelo de caja:</h3>
+                <ul>
+                    <li>inline-size / block-size</li>
+                    <li>margin-block | margin-inline | margin-block-start | margin-block-end | margin-inline-start | margin-inline-end</li>
+                    <li>border-block | border-inline | border-block-start | border-block-end | border-inline-start | border-inline-end</li>
+                    <li>padding-block | padding-inline | padding-block-start | padding-block-end | padding-inline-start | padding-inline-end</li>
+                </ul>
+                <h3>Modelo de caja</h3>
+                <div>
+
+                </div>
+            </div>
+            <p>Si tienes alguna pregunta escríbeme a <a href="mailto:me@leonidasesteban.com">me@leonidasesteban.com</a></p>    
+            <div class="main-content">
+                <h3>Suscríbete a nuestro newsletter</h3>
+                <form action="#" class="form">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <button class="button">Suscribirme</button>
+                </form>
+            </div>
         </div>
     </main>
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <p>© Leonidas Esteban 2021</p>
+            <div class="footer-social">
+                <figure>
+                    <img src="../images/instagram.svg" alt="Logo de Instagram">
+                    <img src="../images/facebook.svg" alt="Logo de Facebook">
+                    <img src="../images/twitter.svg" alt="Logo de Twitter">
+                </figure>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

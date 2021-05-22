@@ -9,19 +9,99 @@
     --black3: #212429;
     --yelow: #FEC62E;
     --white: #FFFFFF;
-    --headLine1: normal 2.4rem/2.8rem var(var(--fontBase));
-    --headLine2: normal 2.4rem/2.8rem var(var(--fontBase));
-    --headLine2: normal 2rem/2.3rem var(var(--fontBase));
-    --body1: normal 1.6rem/2.4rem var(var(--fontBase));
-    --body2: italic 1.6rem/2.4rem var(var(--fontBase));
-    --body2: normal 1.6rem/2.4rem var(var(--fontBase));
+    --headLine1: normal 2.4rem/2.8rem var(--fontBase);
+    --headLine2: normal 2.4rem/2.8rem var(--fontBase);
+    --headLine2: normal 2rem/2.3rem var(--fontBase);
+    --body1: normal 1.6rem/2.4rem var(--fontBase);
+    --body2: italic 1.6rem/2.4rem var(--fontBase);
+    --body2: normal 1.6rem/2.4rem var(--fontBase);
+    --header: normal 1.4rem/2.4rem var(--fontBase);
 }
 
 body{
     background: var(--white);
     min-block-size: 100vh;
-    font-size: 1.6rem;
-    font: var(--font);
+    font: var(--body2);
     margin: 0;
     padding: 0;
+}
+
+.hero{
+    min-block-size: 9.6rem;
+    inline-size: 100%;
+    background-image: linear-gradient(3.36deg, #212325 -63.62%, rgba(255, 255, 255, 0) 43.49%), url(../images/patron.png);
+}
+
+.wrapper{
+    margin-inline-start: 1.6rem;
+    margin-inline-end: 1.6rem;
+}
+
+.header-content{
+    font: var(--header);
+    margin-block-start: 1.6rem;
+    margin-block-end: 4rem;
+}
+
+.header-content ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-content li{
+    padding-inline-start: 0.8rem;
+    padding-block-start: 0.8rem;
+    padding-block-end: 0.8rem;
+    border-radius: 4px;
+}
+
+.header-content a{
+    color: var(--gray3);
+    text-decoration: none;
+}
+
+.header-content li:nth-of-type(1) a{
+    color: var(--white);
+}
+
+.header-content li:nth-of-type(1){
+    background: var(--black1);
+}
+
+.header-content__nav summary{
+    font-weight: 400;
+    color: var(--gray2);
+    margin-block-end: 1.6rem;
+}
+
+.header-content :nth-of-type(2){
+    display: none;
+}
+
+h1{
+    font: var(--headLine1);
+    margin-block-start: 1.6rem;
+    margin-block-end: 1.6rem;
+}
+
+hr{
+    margin-block-start: 4rem;
+    margin-block-end: 4rem;
+}
+
+pre{
+    overflow: auto;
+    padding-inline-start: 4rem;
+    padding-inline-end: 4rem;
+    padding-block-start: 4rem;
+    padding-block-end: 4rem;
+}
+
+.footer{
+    background: var(--black3);
+}
+
+.dom, .css{
+    inline-size: 100%;
 }
