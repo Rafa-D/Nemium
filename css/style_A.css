@@ -16,6 +16,7 @@
     --body2: italic 1.6rem/2.4rem var(--fontBase);
     --body2: normal 1.6rem/2.4rem var(--fontBase);
     --header: normal 1.4rem/2.4rem var(--fontBase);
+    --blockquote: normal 1.6rem/3.2rem var(--fontBase);
 }
 
 body{
@@ -99,7 +100,10 @@ h2{
 }
 
 .logo{
-    margin: 0;
+    margin-block-start: 2.4rem;
+    margin-block-end: 1.6rem;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
     block-size: 6.4rem;
 }
 
@@ -111,17 +115,35 @@ h3{
     font: var(--headLine3);
     color: var(--gray1);
     counter-increment: titleList;
-    margin-block-start: 24px;
-    margin-block-end: 24px;
-}
-
-.main-content:nth-of-type(2) h3{
-    margin-block-start: 16px;
-    margin-block-end: 24px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: inline-block;
+    padding-block-end: 4px;
+    border-bottom: 4px solid var(--gray1);
 }
 
 .main-content h3::before{
     content: counter(titleList, decimal) ". ";
+}
+
+blockquote{
+    font: var(--blockquote);
+    color: var(--gray1);
+    margin-block-start: 4rem;
+    margin-block-end: 4rem;
+    margin-inline-start: 0;   
+    margin-inline-end: 0;
+    padding-inline-start: 16px;
+    border-left: 4px solid var(--black2);
+}
+
+blockquote p{
+    margin-block-start: 0;
+    margin-block-end: 4px;
+}
+
+blockquote span{
+    color: var(--gray2);
 }
 
 pre{
@@ -130,6 +152,12 @@ pre{
     padding-inline-end: 4rem;
     padding-block-start: 4rem;
     padding-block-end: 4rem;
+    background-color: var(--yelow);
+    margin-block-end: 24px;
+}
+
+.main-content:nth-of-type(3) p + h3{
+    margin-block-end: 8px;
 }
 
 .footer{
