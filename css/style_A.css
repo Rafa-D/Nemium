@@ -99,6 +99,13 @@ h2{
     margin-block-end: 24px;
 }
 
+figure{
+    margin-block-start: 0;
+    margin-block-end: 2.4rem;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
 .logo{
     margin-block-start: 2.4rem;
     margin-block-end: 1.6rem;
@@ -137,6 +144,10 @@ blockquote{
     border-left: 4px solid var(--black2);
 }
 
+p{
+    color: var(--gray1);
+}
+
 blockquote p{
     margin-block-start: 0;
     margin-block-end: 4px;
@@ -157,7 +168,56 @@ pre{
 }
 
 .main-content:nth-of-type(3) p + h3{
-    margin-block-end: 8px;
+    margin-block-start: 8px;
+}
+
+.main-content:nth-of-type(4){
+    margin-block-start: 4rem;
+}
+
+.main-content:nth-of-type(4) h3{
+    border: none;
+    padding: 0;
+
+}
+
+.main-content:nth-of-type(4) h3::before{
+    content: none;
+}
+
+.main-content:nth-of-type(4) ol, ul{
+    padding-inline-start: 2rem;
+    color: var(--gray1);
+    margin-block-end: 2.4rem;
+}
+
+.slider-container{
+    display: block;
+    overflow: auto;
+    scroll-behavior: smoth;
+    block-size: auto;
+    font-size: 0
+}
+
+.video{
+    margin: 0;
+    display: inline-block;
+    inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list{
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.slider-bullet{
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background: black;
+    border-radius: 50%;
 }
 
 .footer{
