@@ -191,17 +191,19 @@ pre{
     margin-block-end: 2.4rem;
 }
 
+.slider{
+    border: 1px solid red;
+}
+
 .slider-container{
     display: block;
+    white-space: nowrap;
     overflow: auto;
-    scroll-behavior: smoth;
-    block-size: auto;
-    font-size: 0
+    scroll-behavior: smooth;
+    font-size: 0;
 }
 
 .video{
-    margin: 0;
-    display: inline-block;
     inline-size: 100%;
     block-size: auto;
     aspect-ratio: 16/9;
@@ -209,16 +211,22 @@ pre{
 
 .slider-bullet-list{
     text-align: center;
-    margin-block-start: 10px;
+    margin-block-start: 1.6rem;
 }
 
 .slider-bullet{
     display: inline-block;
-    inline-size: 15px;
-    block-size: 15px;
-    background: black;
+    inline-size: 1.6rem;
+    block-size: 1.6rem;
     border-radius: 50%;
+    background-color: var(--gray1);
 }
+
+
+.slider-bullet:active{
+    background: red;
+}
+
 
 .footer{
     background: var(--black3);
