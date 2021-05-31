@@ -1,27 +1,27 @@
 :root{
     font-size: 62.5%;
-    --fontBase: 'Roboto', sans-serif;
-    --gray1: #424242;
-    --gray2: #616161;
-    --gray3: #808080;
-    --black1: #000000;
-    --black2: #212121;
-    --black3: #212429;
-    --yelow: #FEC62E;
+    --fontBase1: 'Roboto', sans-serif;
+    --fontBase2: 'Nunito', sans-serif;
+    --gray1: #616161;
+    --gray2: #A5A3A5;
+    --gray3: #3A3539;
+    --blue: #157EFB;
+    --black1: #251F24;
+    --yelow: #3A3539;
     --white: #FFFFFF;
-    --headLine1: normal 2.4rem/2.8rem var(--fontBase);
-    --headLine2: normal 2.4rem/2.8rem var(--fontBase);
-    --headLine3: normal 2rem/2.3rem var(--fontBase);
-    --body1: normal 1.6rem/2.4rem var(--fontBase);
-    --body2: normal 1.6rem/2.4rem var(--fontBase);
-    --header: normal 1.4rem/2.4rem var(--fontBase);
-    --blockquote: normal 1.6rem/3.2rem var(--fontBase);
+    --headLine1: normal 2.4rem/3.3rem var(--fontBase2);
+    --headLine2: normal 2.4rem/3.3rem var(--fontBase2);
+    --headLine3: normal 2rem/2.7rem var(--fontBase2);
+    --body1: normal 1.7rem/2.4rem var(--fontBase2);
+    --body2: normal 1.6rem/2.4rem var(--fontBase2);
+    --header: normal 1.4rem/2.4rem var(--fontBase1);
+    --blockquote: normal 1.7rem/3.2rem var(--fontBase2);
 }
 
 body{
-    background: var(--white);
+    background: var(--black1);
     min-block-size: 100vh;
-    font: var(--body2);
+    font: var(--body1);
     margin: 0;
     padding: 0;
 }
@@ -29,15 +29,12 @@ body{
 .hero{
     min-block-size: 9.6rem;
     inline-size: 100%;
-    background-image: linear-gradient(to top, #ffffff -63.62%, rgba(255, 255, 255, 0) 43.49%), url(../images/patron.png);
-    background-repeat: repeat;
-    background-position: center;
-
+    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
 }
 
-.wrapper{
-    margin-inline-start: 1.6rem;
-    margin-inline-end: 1.6rem;
+.header .wrapper{
+    margin-inline-start: 2.7rem;
+    margin-inline-end: 2.7rem;
 }
 
 .header-content{
@@ -59,32 +56,43 @@ body{
     border-radius: 4px;
 }
 
+.header-content__nav summary{
+    font-weight: 400;
+    color: var(--white);
+    margin-block-end: 1.6rem;
+}
+
 .header-content a{
-    color: var(--gray3);
+    color: var(--gray2);
     text-decoration: none;
 }
 
-.header-content ul li:nth-of-type(1) a{
+.header-content ul li:nth-of-type(2) a{
     color: var(--white);
 }
 
-.header-content ul li:nth-of-type(1){
-    background: var(--black1);
-}
-
-.header-content__nav summary{
-    font-weight: 400;
-    color: var(--gray2);
-    margin-block-end: 1.6rem;
+.header-content ul li:nth-of-type(2){
+    background-color: #000000;
 }
 
 .header-content__nav:nth-of-type(2){
     display: none;
 }
 
+.main .wrapper{
+    margin-inline-start: 1.6rem;
+    margin-inline-end: 1.6rem;
+}
+
 h1{
     font: var(--headLine1);
-    color: var(--black2);
+    color: var(--white);
+    margin-block-start: 1.6rem;
+    margin-block-end: 1.6rem;
+}
+
+p{
+    color: var(--gray2);
     margin-block-start: 1.6rem;
     margin-block-end: 1.6rem;
 }
@@ -96,9 +104,18 @@ hr{
 
 h2{
     font: var(--headLine2);
-    color: var(--black2);
+    color: var(--white);
     margin-block-start: 24px;
     margin-block-end: 24px;
+}
+
+h3{
+    font: var(--headLine3);
+    color: var(--white);
+    counter-increment: titleList;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: inline-block;
 }
 
 figure{
@@ -113,22 +130,11 @@ figure{
     margin-block-end: 1.6rem;
     margin-inline-start: 0;
     margin-inline-end: 0;
-    block-size: 6.4rem;
+    block-size: 4.8rem;
 }
 
 .logo img{
     max-block-size: 100%;
-}
-
-h3{
-    font: var(--headLine3);
-    color: var(--gray1);
-    counter-increment: titleList;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    display: inline-block;
-    padding-block-end: 4px;
-    border-bottom: 4px solid var(--gray1);
 }
 
 .main-content h3::before{
@@ -136,23 +142,28 @@ h3{
 }
 
 blockquote{
+    background: var(--gray3);
     font: var(--blockquote);
     color: var(--gray1);
     margin-block-start: 4rem;
     margin-block-end: 4rem;
     margin-inline-start: 0;   
     margin-inline-end: 0;
-    padding-inline-start: 16px;
+    padding-inline-start: 0.8rem;
+    padding-inline-end: 0.8rem;
+    padding-block-start: 0.8rem;
+    padding-block-end: 0.8rem;
     border-left: 4px solid var(--black2);
-}
-
-p{
-    color: var(--gray1);
+    border-radius: 0.8rem;
 }
 
 blockquote p{
     margin-block-start: 0;
-    margin-block-end: 4px;
+    margin-block-end: 0;
+}
+
+blockquote p:first-child{
+    margin-block-end: 1.6rem;
 }
 
 blockquote span{
@@ -161,12 +172,15 @@ blockquote span{
 
 pre{
     overflow: auto;
-    padding-inline-start: 4rem;
-    padding-inline-end: 4rem;
-    padding-block-start: 4rem;
-    padding-block-end: 4rem;
+    font: var(--body2);
+    color: var(--white);
+    padding-inline-start: 1.6rem;
+    padding-inline-end: 1.6rem;
+    padding-block-start: 1.6rem;
+    padding-block-end: 1.6rem;
     background-color: var(--yelow);
     margin-block-end: 24px;
+    border-radius: 0.8rem;
 }
 
 .dom, .css{
@@ -390,7 +404,6 @@ p > a{
 
     .logo{
         margin-block-start: 4rem;
-        block-size: 8rem;
     }
 
     blockquote{
