@@ -1,27 +1,27 @@
 :root{
     font-size: 62.5%;
-    --fontBase1: 'Roboto', sans-serif;
-    --fontBase2: 'Nunito', sans-serif;
-    --gray1: #616161;
-    --gray2: #A5A3A5;
-    --gray3: #3A3539;
-    --blue: #157EFB;
-    --black1: #251F24;
-    --yelow: #3A3539;
+    --fontBase: 'Roboto', sans-serif;
+    --gray1: #424242;
+    --gray2: #616161;
+    --gray3: #808080;
+    --black1: #000000;
+    --black2: #212121;
+    --black3: #212429;
+    --yelow: #FEC62E;
     --white: #FFFFFF;
-    --headLine1: normal 2.4rem/3.3rem var(--fontBase2);
-    --headLine2: normal 2.4rem/3.3rem var(--fontBase2);
-    --headLine3: normal 2rem/2.7rem var(--fontBase2);
-    --body1: normal 1.7rem/2.4rem var(--fontBase2);
-    --body2: normal 1.6rem/2.4rem var(--fontBase2);
-    --header: normal 1.4rem/2.4rem var(--fontBase1);
-    --blockquote: normal 1.7rem/3.2rem var(--fontBase2);
+    --headLine1: normal 2.4rem/2.8rem var(--fontBase);
+    --headLine2: normal 2.4rem/2.8rem var(--fontBase);
+    --headLine3: normal 2rem/2.3rem var(--fontBase);
+    --body1: normal 1.6rem/2.4rem var(--fontBase);
+    --body2: normal 1.6rem/2.4rem var(--fontBase);
+    --header: normal 1.4rem/2.4rem var(--fontBase);
+    --blockquote: normal 1.6rem/3.2rem var(--fontBase);
 }
 
 body{
-    background: var(--black1);
+    background: var(--white);
     min-block-size: 100vh;
-    font: var(--body1);
+    font: var(--body2);
     margin: 0;
     padding: 0;
 }
@@ -29,12 +29,15 @@ body{
 .hero{
     min-block-size: 9.6rem;
     inline-size: 100%;
-    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+    background-image: linear-gradient(274.51deg, rgba(74, 0, 224, 0.6) 5%, rgba(142, 45, 226, 0.5) 130.61%), url(../images/patron2.png);
+    background-repeat: repeat;
+    background-position: center;
+
 }
 
-.header .wrapper{
-    margin-inline-start: 2.7rem;
-    margin-inline-end: 2.7rem;
+.wrapper{
+    margin-inline-start: 1.6rem;
+    margin-inline-end: 1.6rem;
 }
 
 .header-content{
@@ -56,67 +59,42 @@ body{
     border-radius: 4px;
 }
 
-.header-content__nav summary{
-    font-weight: 400;
-    color: var(--white);
-    margin-block-end: 2.4rem;
-}
-
 .header-content a{
-    color: var(--gray2);
+    color: var(--gray3);
     text-decoration: none;
 }
 
-.header-content ul li:nth-of-type(2) a{
+.header-content ul li:nth-of-type(1) a{
     color: var(--white);
 }
 
-.header-content ul li:nth-of-type(2){
-    background-color: #000000;
+.header-content ul li:nth-of-type(1){
+    background: var(--black1);
 }
 
-.header-content__nav:nth-of-type(2){
-    display: none;
-}
-
-.main .wrapper{
-    margin-inline-start: 1.6rem;
-    margin-inline-end: 1.6rem;
+.header-content__nav summary{
+    font-weight: 400;
+    color: var(--gray2);
+    margin-block-end: 1.6rem;
 }
 
 h1{
     font: var(--headLine1);
-    color: var(--white);
-    margin-block-start: 1.6rem;
-    margin-block-end: 1.6rem;
-}
-
-p{
-    color: var(--gray2);
+    color: var(--black2);
     margin-block-start: 1.6rem;
     margin-block-end: 1.6rem;
 }
 
 hr{
-    border-color: #616161;
     margin-block-start: 4rem;
     margin-block-end: 4rem;
 }
 
 h2{
     font: var(--headLine2);
-    color: var(--white);
+    color: var(--black2);
     margin-block-start: 24px;
     margin-block-end: 24px;
-}
-
-h3{
-    font: var(--headLine3);
-    color: var(--white);
-    counter-increment: titleList;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    display: inline-block;
 }
 
 figure{
@@ -131,11 +109,22 @@ figure{
     margin-block-end: 1.6rem;
     margin-inline-start: 0;
     margin-inline-end: 0;
-    block-size: 4.8rem;
+    block-size: 6.4rem;
 }
 
 .logo img{
     max-block-size: 100%;
+}
+
+h3{
+    font: var(--headLine3);
+    color: var(--gray1);
+    counter-increment: titleList;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: inline-block;
+    padding-block-end: 4px;
+    border-bottom: 4px solid var(--gray1);
 }
 
 .main-content h3::before{
@@ -143,28 +132,23 @@ figure{
 }
 
 blockquote{
-    background: var(--gray3);
     font: var(--blockquote);
     color: var(--gray1);
     margin-block-start: 4rem;
     margin-block-end: 4rem;
     margin-inline-start: 0;   
     margin-inline-end: 0;
-    padding-inline-start: 0.8rem;
-    padding-inline-end: 0.8rem;
-    padding-block-start: 0.8rem;
-    padding-block-end: 0.8rem;
+    padding-inline-start: 16px;
     border-left: 4px solid var(--black2);
-    border-radius: 0.8rem;
+}
+
+p{
+    color: var(--gray1);
 }
 
 blockquote p{
     margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-blockquote p:first-child{
-    margin-block-end: 1.6rem;
+    margin-block-end: 4px;
 }
 
 blockquote span{
@@ -173,15 +157,12 @@ blockquote span{
 
 pre{
     overflow: auto;
-    font: var(--body2);
-    color: var(--white);
-    padding-inline-start: 1.6rem;
-    padding-inline-end: 1.6rem;
-    padding-block-start: 1.6rem;
-    padding-block-end: 1.6rem;
+    padding-inline-start: 4rem;
+    padding-inline-end: 4rem;
+    padding-block-start: 4rem;
+    padding-block-end: 4rem;
     background-color: var(--yelow);
     margin-block-end: 24px;
-    border-radius: 0.8rem;
 }
 
 .dom, .css{
@@ -207,8 +188,7 @@ pre{
 
 .main-content:nth-of-type(4) ol, ul{
     padding-inline-start: 2rem;
-    color: var(--gray2);
-    margin-block-start: 1.6rem;
+    color: var(--gray1);
     margin-block-end: 2.4rem;
 }
 
@@ -240,7 +220,7 @@ pre{
 }
 
 .is-active{
-    background: var(--white);
+    background: var(--gray1);
 }
 
 .main-content:nth-of-type(5){
@@ -248,16 +228,11 @@ pre{
 }
 
 .main-content:nth-of-type(5) h2{
-    color: var(--white);
-    margin-block-end: 1.6rem;
+    color: var(--gray1);
 }
 
 p > a{
-    color: var(--blue);
-}
-
-div + p{
-    color: var(--white);
+    color: var(--gray1);
 }
 
 .main-content:last-child{
@@ -268,7 +243,7 @@ div + p{
 .main-content:last-child h2{
     margin-block-start: 1.6rem;
     margin-block-end: 1.6rem;
-    color: var(--white);
+    color: var(--gray1);
 }
 
 .form{
@@ -279,39 +254,37 @@ div + p{
     box-sizing: border-box;
     display: block;
     width: 100%;
-    border: 1px solid var(--white);
-    border-radius: 0.8rem;
-    margin-block-start: 0;
-    margin-block-end: 2.4rem;
+    border: 1px solid var(--gray2);
+    border-radius: 9rem;
+    margin-block-start: 1.6rem;
+    margin-block-end: 1.6rem;
     padding-inline-start: 1.6rem;
     padding-inline-end: 6.4rem;
     padding-block-start: 1.2rem;
     padding-block-end: 1.2rem;
     font: var(--body2);
-    background: var(--black1);
 }
 
-
 .button{
-    position: block;
+    position: absolute;
     font: var(--body2);
-    font-weight: 700;
-    width: 100%;
-    border-radius: 0.8rem;
+    font-weight: 500;
+    border-radius: 9rem;
     padding-inline-start: 1.6rem;
-    padding-inline-end: 1.6rem;
+    padding-inline-end: 1.3rem;
     padding-block-start: 1.2rem;
     padding-block-end: 1.2rem;
     border: none;
-    background: var(--blue);
+    background: var(--black1);
     color: var(--white);
-    text-align: center;
+    bottom: 1px;
+    right: 0;
 }
 
 .footer{
     min-block-size: 174px;
     inline-size: 100%;
-    background: var(--white);
+    background: var(--black3);
 }
 
 .footer-wrapper{
@@ -322,9 +295,7 @@ div + p{
 }
 
 .footer h2{
-    color: #251F24;
-    font-size: 3.2rem;
-    line-height: 4.4rem;
+    color: var(--white);
     margin-block-start: 0;
     margin-block-end: 1.9rem;
     text-align: center;
@@ -341,56 +312,50 @@ div + p{
     padding-inline: 1.1rem;
 }
 
-footer{
-    display: none;
-}
-
 @media screen and (min-width: 1366px) {
     :root{
-        --headLine1: normal 6.4rem/8.7rem var(--fontBase2);
-        --headLine2: normal 4rem/5.5rem var(--fontBase2);
-        --headLine3: normal 3.2rem/4.4rem var(--fontBase2);
-        --body1: normal 1.7rem/2.4rem var(--fontBase2);
-        --body2: normal 1.6rem/2.4rem var(--fontBase2);
-        --header: normal 1.4rem/2.4rem var(--fontBase1);
-        --blockquote: normal 2.4rem/3.2rem var(--fontBase2);
+        --headLine1: normal 6rem/7rem var(--fontBase);
+        --headLine2: normal 3.2rem/3.8rem var(--fontBase);
+        --headLine3: normal 2.4rem/2.8rem var(--fontBase);
+        --body1: normal 1.6rem/2.4rem var(--fontBase);
+        --body2: normal 1.6rem/2.4rem var(--fontBase);
+        --header: normal 1.4rem/2.4rem var(--fontBase);
+        --blockquote: normal 2.4rem/3.2rem var(--fontBase);
     }
 
     .hero{
         block-size: 35rem;
     }
     
-    .main .wrapper{
-        max-inline-size: 636px;
-        margin-inline-start: 53rem;
-        margin-inline-end: 20rem;
+    main .wrapper{
+        max-inline-size: 902px;
+        margin: auto;
     }
 
     .header-content__nav:nth-of-type(1){
         margin-block-start: 6.4rem;
         margin-block-end: 10.4rem;
     }
-    
+
     .header-content__nav:nth-of-type(2){
         display: block;
     }
 
     .header-content p{
-        color: var(--white);
+        color: var(--gray3);
         margin-block-start: 1.6rem;
-        margin-block-end: 2.4rem;
+        margin-block-end: 1.6rem;
     }
 
     .header-content ol{
-        padding-inline-start: 5.2rem;
+        padding-inline-start: 2rem;
         margin-block-start: 1.6rem;
         margin-block-end: 1.6rem;
-        color: var(--gray2);
+        color: var(--gray3);
     }
 
-    .header .wrapper{
+    header .wrapper{
         position: absolute;
-        margin-inline-start: 20rem;
     }
     .header{
         position: sticky;
@@ -398,15 +363,16 @@ footer{
     }
 
     .header-content__nav{
-        inline-size: 30.6rem;
-    }
-
-    .header-content__nav:last-of-type summary{
-        margin-block-end: 1.6rem;
+        inline-size: 18.8rem;
     }
 
     .main-content:nth-of-type(1){
         margin-block-start: 6.4rem;
+    }
+
+    hr{
+        margin-block-start: 6.4rem;
+        margin-block-end: 6.4rem;
     }
 
     h2{
@@ -424,23 +390,15 @@ footer{
     }
 
     blockquote{
-        margin-block-start: 8rem;
-        margin-block-end: 6.3rem;
-        padding-block-start: 2.4rem;
-        padding-block-end: 2.4rem;
-        padding-inline-start: 2.4rem;
-        padding-inline-end: 1.7rem;
+        margin-block-start: 3.2rem;
+        margin-block-end: 6.4rem;
     }
 
-    blockquote p:first-child{
+    blockquote p{
         margin-block-end: 1.6rem;
     }
 
     pre{
-        padding-block-start: 4rem;
-        padding-block-end: 4rem;
-        padding-inline-start: 4rem;
-        padding-inline-end: 4rem;
         margin-block-end: 4rem;
     }
 
@@ -449,15 +407,11 @@ footer{
     }
 
     .imgage_css{
-        margin-block-end: 12.3rem;
+        margin-block-end: 15.6rem;
     }
 
     .main-content:nth-of-type(4) ol, ul{
         margin-block-end: 4rem;
-    }
-
-    .main-content:nth-of-type(5){
-        margin-block-end: 5.1rem;
     }
 
     .main-content:nth-of-type(5) h2{
@@ -465,14 +419,19 @@ footer{
     }
 
     .main-content:last-child{
-        margin-block-end: 8rem;
+        margin-block-end: 11.3rem;
     }
 
     .form input{
-        display: block;
+        display: inline-block;
+        inline-size: 28rem;
         font: var(--body2);
         padding-inline-end: 1.6rem;
         margin-inline-end: 1.6rem;
+    }
+
+    .form input:last-of-type{
+        inline-size: 33.7rem;
     }
 
     .button{
@@ -482,14 +441,16 @@ footer{
     }
 
     .footer{
-        display: block;
         max-block-size: 174px;
-        background: var(--white);
     }
 
     .footer-wrapper{
-        padding-block-end: 4.5rem;
+        padding-block-end: 5.1rem;
     }
-
 }   
 
+@media screen and (min-width: 1482px) {
+    header .wrapper{
+        margin-inline-start: 5rem;
+    }
+}

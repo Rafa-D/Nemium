@@ -341,7 +341,7 @@ p > a{
         margin-block-end: 10.4rem;
     }
 
-    .header-content:nth-of-type(2){
+    .header-content__nav:nth-of-type(2){
         display: block;
     }
 
