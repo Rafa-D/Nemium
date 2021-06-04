@@ -4,7 +4,7 @@
     --fontBase2: 'Rubik', sans-serif;
     --gray1: #545454;
     --gray2: #616161;
-    --black1: #000000;
+    --black: #000000;
     --purple1: #5551FF;
     --purple2: #8E2DE2;
     --white: #FFFFFF;
@@ -79,7 +79,7 @@ nav + p{
 }
 
 .header-content ul li:nth-of-type(4){
-    background: var(--black1);
+    background: var(--black);
 }
 
 .header-content__nav summary{
@@ -90,7 +90,7 @@ nav + p{
 
 .header-content__nav:nth-of-type(2) summary{
     font-weight: bold;
-    color: var(--black1);
+    color: var(--black);
     margin-block-end: 1.6rem;
 }
 
@@ -113,7 +113,7 @@ nav + p{
 
 h1{
     font: var(--headLine1);
-    color: var(--black2);
+    color: var(--black);
     margin-block-start: 1.6rem;
     margin-block-end: 1.6rem;
 }
@@ -126,8 +126,8 @@ hr{
 h2{
     font: var(--headLine2);
     color: var(--black2);
-    margin-block-start: 24px;
-    margin-block-end: 24px;
+    margin-block-start: 4rem;
+    margin-block-end: 4rem;
 }
 
 figure{
@@ -138,11 +138,11 @@ figure{
 }
 
 .logo{
-    margin-block-start: 2.4rem;
+    margin-block-start: 4rem;
     margin-block-end: 1.6rem;
     margin-inline-start: 0;
     margin-inline-end: 0;
-    block-size: 6.4rem;
+    block-size: 8rem;
 }
 
 .logo img{
@@ -151,62 +151,66 @@ figure{
 
 h3{
     font: var(--headLine3);
-    color: var(--gray1);
+    color: var(--black);
     counter-increment: titleList;
     margin-block-start: 0;
     margin-block-end: 0;
-    display: inline-block;
-    padding-block-end: 4px;
-    border-bottom: 4px solid var(--gray1);
 }
 
 .main-content h3::before{
     content: counter(titleList, decimal) ". ";
 }
 
-blockquote{
-    font: var(--blockquote);
+p{
     color: var(--gray1);
+}
+
+blockquote{
+    text-align: left;
+    font: var(--blockquote);
+    color: var(--black);
     margin-block-start: 4rem;
     margin-block-end: 4rem;
     margin-inline-start: 0;   
     margin-inline-end: 0;
     padding-inline-start: 16px;
-    border-left: 4px solid var(--black2);
-}
-
-p{
-    color: var(--gray1);
+    border-left: 4px solid var(--purple1);
 }
 
 blockquote p{
+    color: var(--black);
     margin-block-start: 0;
-    margin-block-end: 4px;
+    margin-block-end: 0;
 }
 
 blockquote span{
-    color: var(--gray2);
+    color: var(--black);
 }
 
 pre{
+    text-align: left;
     overflow: auto;
     padding-inline-start: 4rem;
     padding-inline-end: 4rem;
     padding-block-start: 4rem;
     padding-block-end: 4rem;
-    background-color: var(--yelow);
-    margin-block-end: 24px;
+    background-color: var(--white);
+    margin-block-end: 4rem;
+    border-radius: 0.8rem;
+    border: 0.8rem solid var(--purple1);
+    box-shadow: -1rem 1rem 0 #ABAAF6;
 }
 
 .dom, .css{
     inline-size: 100%;
 }
 
-.main-content:nth-of-type(3) p + h3{
-    margin-block-start: 8px;
+.main-content:nth-of-type(3) h3{
+    margin-block-start: 4rem;
 }
 
 .main-content:nth-of-type(4){
+    text-align: left;
     margin-block-start: 4rem;
 }
 
@@ -217,6 +221,10 @@ pre{
 
 .main-content:nth-of-type(4) h3::before{
     content: none;
+}
+
+.main-content:nth-of-type(4) ul li::marker{
+    color: var(--purple1);
 }
 
 .main-content:nth-of-type(4) ol, ul{
@@ -249,26 +257,33 @@ pre{
     inline-size: 1.6rem;
     block-size: 1.6rem;
     border-radius: 50%;
-    background-color: rgba(66, 66, 66, 0.2);
+    background-color: rgba(142, 45, 226, 0.5);
 }
 
 .is-active{
-    background: var(--gray1);
+    background: var(--purple1);
 }
 
 .main-content:nth-of-type(5){
+    text-align: left;
     margin-block-end: 40px;
 }
 
 .main-content:nth-of-type(5) h2{
-    color: var(--gray1);
+    color: var(--black);
+    margin-block-end: 1.6rem;
 }
 
 p > a{
     color: var(--gray1);
 }
 
+.main-content:nth-of-type(5) + p{
+    text-align: left;
+}
+
 .main-content:last-child{
+    text-align: left;
     margin-block-start: 4rem;
     margin-block-end: 4rem;
 }
@@ -276,7 +291,7 @@ p > a{
 .main-content:last-child h2{
     margin-block-start: 1.6rem;
     margin-block-end: 1.6rem;
-    color: var(--gray1);
+    color: var(--black);
 }
 
 .form{
@@ -287,7 +302,7 @@ p > a{
     box-sizing: border-box;
     display: block;
     width: 100%;
-    border: 1px solid var(--gray2);
+    border: 1px solid var(--black);
     border-radius: 9rem;
     margin-block-start: 1.6rem;
     margin-block-end: 1.6rem;
@@ -296,6 +311,10 @@ p > a{
     padding-block-start: 1.2rem;
     padding-block-end: 1.2rem;
     font: var(--body1);
+}
+
+.form input::placeholder{
+    color: var(--black);
 }
 
 .button{
@@ -308,7 +327,7 @@ p > a{
     padding-block-start: 1.2rem;
     padding-block-end: 1.2rem;
     border: none;
-    background: var(--black1);
+    background: var(--purple1);
     color: var(--white);
     bottom: 1px;
     right: 0;
@@ -317,7 +336,7 @@ p > a{
 .footer{
     min-block-size: 174px;
     inline-size: 100%;
-    background: var(--black3);
+    background: var(--black);
 }
 
 .footer-wrapper{
@@ -347,12 +366,12 @@ p > a{
 
 @media screen and (min-width: 1366px) {
     :root{
-        --headLine1: normal 6rem/7rem var(--fontBase);
-        --headLine2: normal 3.2rem/3.8rem var(--fontBase);
-        --headLine3: normal 2.4rem/2.8rem var(--fontBase);
-        --body1: normal 1.6rem/2.4rem var(--fontBase);
-        --header: normal 1.4rem/2.4rem var(--fontBase);
-        --blockquote: normal 2.4rem/3.2rem var(--fontBase);
+        --headLine1: normal 6rem/7rem var(--fontBase2);
+        --headLine2: normal 3.2rem/3.8rem var(--fontBase2);
+        --headLine3: normal 2.4rem/2.8rem var(--fontBase2);
+        --body1: normal 1.6rem/2.4rem var(--fontBase2);
+        --header: normal 1.4rem/2.4rem var(--fontBase1);
+        --blockquote: normal 2.4rem/3.2rem var(--fontBase2);
     }
 
     .hero{
@@ -360,13 +379,13 @@ p > a{
     }
     
     main .wrapper{
-        max-inline-size: 902px;
+        max-inline-size: 903px;
         margin: auto;
     }
 
     .header-content__nav:nth-of-type(1){
         margin-block-start: 6.4rem;
-        margin-block-end: 10.4rem;
+        margin-block-end: 11.2rem;
     }
 
     .header-content__nav:nth-of-type(2){
@@ -374,7 +393,7 @@ p > a{
     }
 
     .header-content p{
-        color: var(--gray3);
+        color: var(--gray2);
         margin-block-start: 1.6rem;
         margin-block-end: 1.6rem;
     }
@@ -383,19 +402,21 @@ p > a{
         padding-inline-start: 2rem;
         margin-block-start: 1.6rem;
         margin-block-end: 1.6rem;
-        color: var(--gray3);
+        color: var(--gray2);
     }
 
     header .wrapper{
         position: absolute;
+        right: 0;
     }
+
     .header{
         position: sticky;
         inset-block-start: 0;
     }
 
     .header-content__nav{
-        inline-size: 18.8rem;
+        inline-size: 20.8rem;
     }
 
     .main-content:nth-of-type(1){
@@ -483,6 +504,6 @@ p > a{
 
 @media screen and (min-width: 1482px) {
     header .wrapper{
-        margin-inline-start: 5rem;
+        margin-inline-end: 5rem;
     }
 }
