@@ -381,6 +381,7 @@ div + p{
         max-inline-size: 636px;
         margin-inline-start: 53rem;
         margin-inline-end: 20rem;
+        margin: auto;
     }
 
     .header-content{
@@ -398,7 +399,8 @@ div + p{
 
     .header .wrapper{
         position: absolute;
-        margin-inline-start: 20rem;
+        margin-inline-start: 5rem;
+        background: var(--blue1);
     }
     .header{
         position: sticky;

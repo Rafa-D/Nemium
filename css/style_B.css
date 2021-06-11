@@ -364,6 +364,7 @@ footer{
         max-inline-size: 636px;
         margin-inline-start: 53rem;
         margin-inline-end: 20rem;
+        margin: auto;
     }
 
     .header-content__nav:nth-of-type(1){
@@ -390,7 +391,8 @@ footer{
 
     .header .wrapper{
         position: absolute;
-        margin-inline-start: 20rem;
+        margin-inline-start: 5rem;
+        background: var(--black1);
     }
     .header{
         position: sticky;

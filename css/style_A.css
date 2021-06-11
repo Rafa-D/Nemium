@@ -41,6 +41,7 @@ body{
 }
 
 .header-content{
+    background: var(--white);
     font: var(--header);
     margin-block-start: 1.6rem;
     margin-block-end: 4rem;
